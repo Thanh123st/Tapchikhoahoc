@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ass/css/main.css">
+    <link rel="stylesheet" href="ass/css/base.css">
+    <title>Giao diện</title>
+</head>
+
+<body>
+    <div class="Banner">
+        <header>
+            <img src="ass/img/CTUET.png" alt="Banner">
+        </header>
+        <div class="Navigation">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="" onclick="showContext('home'); return false;"><i class="fa fa-home" id="home-icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link"><a href="#">Giới thiệu</a><i class="fa-solid fa-sort-down"></i></div>
+                    <div class="nav-item-hidden">
+                        <a href="" onclick="showContext('about_1'); return false;">Mục đích và phạm vi của tạp chí</a>
+                        <a href="" onclick="showContext('about_2'); return false;">Tần suất xuất bản</a>
+                        <a href="" onclick="showContext('about_3'); return false;">Biên tập và đạo đức xuất bản</a>
+                        <a href="" onclick="showContext('about_4'); return false;">Chính sách chung và các nguyên tắc</a>
+                        <a href="" onclick="showContext('about_5'); return false;">Tài trợ tạp chí</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div  class="nav-link"><a href="#">Hướng dẫn</a><i class="fa-solid fa-sort-down"></i></div>
+                    <div class="nav-item-hidden">
+                        <a href="" onclick="showContext('guideli_tacgia'); return false;">Hướng dẫn tác giả</a>
+                        <a href="" onclick="showContext('guideli_phanbien'); return false;">Hướng dẫn phản biện</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="" onclick="showContext('editing'); return false;">Biên tập</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" onclick="showContext('archiving'); return false;">Lưu trữ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" onclick="showContext('submission'); return false;">Gửi bài</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Đăng ký</a>
+                </li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" name="search" placeholder="Tìm kiếm">
+                <button type="submit" style="cursor: pointer;"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Home -->
+    <div id="home" class="context">
+        <!-- LAYOUT -->
+        <div class="layout">
+            <!-- Nội dung chính -->
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p>
+                            Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ là một tạp chí học thuật uy tín được Bộ Thông tin và Truyền thông cấp Giấy phép hoạt động Báo chí in và Tạp chí điện tử số 9999/GP-BTTTT ngày 01/01/2020. Tạp chí được Cục Thông tin Khoa học và Công nghệ Quốc gia cấp mã số ISSN cho cả Tạp chí in (ISSN 1234-5678) và Tạp chí điện tử (eISSN 8765-4321).
+                        </p>
+                        <p>
+                            Tạp chí là nơi hội tụ các công trình nghiên cứu khoa học từ các giảng viên, học viên, sinh viên, và các nhà nghiên cứu trong nước cũng như quốc tế. Với sứ mệnh tạo ra một diễn đàn trao đổi và công bố các kết quả nghiên cứu khoa học thuộc nhiều lĩnh vực, Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ luôn cam kết đảm bảo chất lượng cao nhất cho các bài báo được đăng tải.
+                        </p>
+                        <p>
+                            <strong>Xuất bản định kỳ</strong>
+                        </p>
+                        <p>
+                            Từ năm 2024, Tạp chí được phép xuất bản 10 số định kỳ hàng năm bằng cả tiếng Việt và tiếng Anh, bao gồm:
+                        </p>
+                        <ul>
+                            <li>05 số chuyên san Khoa học Kỹ thuật và Công nghệ: Xuất bản vào các tháng 1, 3, 5, 7 và 9.</li>
+                            <li>03 số chuyên san Khoa học Xã hội và Nhân văn: Xuất bản vào các tháng 2, 6, và 10.</li>
+                            <li>02 số chuyên san Khoa học Tự nhiên: Xuất bản vào các tháng 4 và 8.</li>
+                        </ul>
+                        <p>
+                            Ngoài các số định kỳ, Tạp chí cũng xuất bản các số đặc biệt theo yêu cầu từ các biên tập viên khách mời nhằm hỗ trợ các hội thảo khoa học trong và ngoài nước. Hội đồng biên tập cũng mời các nhà khoa học có uy tín viết các bài báo tổng quan để hệ thống hóa và định hướng nghiên cứu cho các chuyên ngành.
+                        </p>
+                        <p>
+                            Hội đồng biên tập rất mong nhận được sự hợp tác từ các nhà khoa học, giảng viên, học viên trong và ngoài nước gửi bài báo và tham gia bình duyệt các bài báo của Tạp chí.
+                        </p>
+                    </div>
+                </article>
+                
+
+            </div>
+            <!-- Slide-bar -->
+            <div class="slide-bar">
+                <div class="slide-bar-board">
+                    <h2 class="slide-bar-board-title">Tin tức</h2>
+                    <article class="slide-bar-board-content">
+                        <a href="#">
+                            CHƯƠNG TRÌNH ASEAN CAMP LẦN THỨ 5 TẠI TRƯỜNG ĐẠI HỌC RAJABHAT RAJANAGARINDRA 
+                        </a><br>
+                        <time datetime="2024-07-18">18/07/2024</time>
+                    </article>
+                    
+                    <article class="slide-bar-board-content">
+                        <a href="#">
+                            TRƯỜNG ĐẠI HỌC KỸ THUẬT - CÔNG NGHỆ CẦN THƠ TỔ CHỨC HỘI THẢO QUỐC TẾ FOLLOW-ON TESOL UNCONFERENCE
+                        </a><br>
+                        <time datetime="2024-07-10">10/07/2024</time>
+                    </article>
+                </div>
+                <div class="slide-bar-board">
+                    <h2 class="slide-bar-board-title">Thành viên và chỉ mục</h2>
+                    <div class="slide-bar-board-index">
+                        <a href=""><img src="https://library.northsouth.edu/wp-content/uploads/2019/09/doaj.jpg" alt=""></a>
+                        <a href=""><img src="https://dthujs.vn/templates/images/indexing/crossref.jpeg" alt=""></a>
+                        <a href=""><img src="https://dthujs.vn/templates/images/indexing/gscholar.png" alt=""></a>                    <a href=""><img src="https://kiemtratailieu.vn/wp-content/uploads/2021/11/logo-full-2-2.png" alt=""></a>
+                        <a href=""><img src="ass/img/logo-cty.png" alt=""></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Giới thiệu -->
+    <div id="about_1" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Mục đích và phạm vi của tạp chí.</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>Tôn chỉ, mục đích</strong></p>
+                        <ul>
+                            <li>Thông tin về hoạt động của Trường Đại học Kỹ thuật Công nghệ Cần Thơ.</li>
+                            <li>Định kỳ theo kỳ hạn xuất bản (đối với loại hình tạp chí in), định kỳ cập nhật thông tin theo quy định của pháp luật (đối với loại hình tạp chí điện tử) để thông tin chuyên sâu, chuyên ngành, giới thiệu, công bố kết quả nghiên cứu khoa học thuộc các lĩnh vực đào tạo, giảng dạy của Trường Đại học Kỹ thuật Công nghệ Cần Thơ.</li>
+                        </ul>
+
+                        <p><strong>Trọng tâm và phạm vi </strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ là tạp chí học thuật truy cập mở được bình duyệt do Trường Đại học Kỹ thuật Công nghệ Cần Thơ xuất bản. Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ có phạm vi đa ngành, xử lý một số khía cạnh của Khoa học Xã hội và Nhân văn; Khoa học Tự nhiên và Công nghệ. Mặc dù Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ chủ yếu tập trung vào các chủ đề nêu trên trong bối cảnh Việt Nam, chúng tôi cũng hoan nghênh các bài nộp đề cập đến các chủ đề đó trong bối cảnh cộng đồng ASEAN (Hiệp hội các quốc gia Đông Nam Á). Để hỗ trợ các nhà giáo dục địa phương và thúc đẩy hợp tác nghiên cứu trong ASEAN, các bài nộp có phạm vi rõ ràng liên quan đến Việt Nam hoặc ASEAN hoặc khu vực hoặc quốc tế nhưng phù hợp với độc giả Việt Nam hoặc ASEAN cũng được khuyến khích.</p>
+
+                        <p>Những đóng góp cho Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ có thể được thực hiện dưới dạng một bài báo nghiên cứu nguyên bản hoặc dưới dạng một bài đánh giá có cấu trúc, hệ thống, tài liệu tuân theo một phương pháp cụ thể.</p>
+
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ xuất bản 09 số/năm theo hai chuyên san Khoa học Xã hội và Nhân văn; chuyên san Khoa học Tự nhiên bằng ngôn ngữ tiếng Việt hoặc tiếng Anh. Tạp chí thực hiện việc xuất bản bản in và xuất bản trực tuyến trên Hệ thống quản lý xuất bản kỹ thuật số của Tạp chí. Các phần này là một tính năng cố định của Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ và sẽ được mở để gửi liên tục.</p>
+
+                        <p>Bên cạnh các số định kỳ đa ngành, đa lĩnh vực, Tạp chí cũng xuất bản các số đặc biệt theo đề nghị của các biên tập viên khách mời nhằm bảo trợ cho các hội thảo khoa học chuyên ngành trong nước và quốc tế. Ngoài việc nhận đăng các bài báo nghiên cứu nguyên tác, Hội đồng biên tập Tạp chí cũng mời các nhà khoa học có uy tín viết các bài báo tổng quan để lược sử nghiên cứu trong chuyên ngành, hệ thống hóa những vấn đề đã được giải quyết và gợi ý những định hướng nghiên cứu tiếp theo cho chuyên ngành.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tần suất xuất bản -->
+    <div id="about_2" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Tần suất xuất bản</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ xuất bản định kỳ 09 số mỗi năm, bao gồm:</strong></p>
+    
+                        <ul>
+                            <li>Số 1: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Việt) xuất bản trước ngày 15/02.</li>
+                            <li>Số 2: Chuyên san Khoa học Tự nhiên (Tiếng Việt) xuất bản trước ngày 15/03.</li>
+                            <li>Số 3: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Anh) xuất bản trước ngày 15/04.</li>
+                            <li>Số 4: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Việt) xuất bản trước ngày 15/06.</li>
+                            <li>Số 5: Chuyên san Khoa học Tự nhiên (Tiếng Anh) xuất bản trước ngày 15/07.</li>
+                            <li>Số 6: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Việt) xuất bản trước ngày 15/08.</li>
+                            <li>Số 7: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Anh) xuất bản trước ngày 15/10.</li>
+                            <li>Số 8: Chuyên san Khoa học Tự nhiên (Tiếng Việt) xuất bản trước ngày 15/11.</li>
+                            <li>Số 9: Chuyên san Khoa học Xã hội và Nhân văn (Tiếng Việt) xuất bản trước ngày 15/12.</li>
+                        </ul>
+                        
+                        <p>Để biết thêm thông tin về các số đặc biệt và các bài viết đã xuất bản, vui lòng truy cập vào Hệ thống quản lý xuất bản kỹ thuật số của Tạp chí.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biên tập và đạo đức xuất bản -->
+    <div id="about_3" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Biên tập và đạo đức xuất bản</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>Biên tập</strong></p>
+                        <p>Chúng tôi cam kết duy trì tiêu chuẩn cao nhất trong biên tập và đánh giá các bài báo. Các bài báo được gửi đến Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ sẽ được đánh giá bởi các nhà nghiên cứu và chuyên gia hàng đầu trong lĩnh vực tương ứng. Quá trình đánh giá sẽ bao gồm:</p>
+                        <ul>
+                            <li>Đánh giá sơ bộ để xác định tính phù hợp và chất lượng cơ bản của bài báo.</li>
+                            <li>Đánh giá chuyên sâu bởi ít nhất hai phản biện độc lập và có uy tín trong lĩnh vực.</li>
+                            <li>Đánh giá và quyết định cuối cùng của Hội đồng Biên tập dựa trên các phản biện và khuyến nghị.</li>
+                        </ul>
+    
+                        <p><strong>Đạo đức Xuất bản</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ tuân thủ các nguyên tắc đạo đức xuất bản nghiêm ngặt để đảm bảo tính trung thực và độ tin cậy của các công trình nghiên cứu được công bố. Các nguyên tắc chính bao gồm:</p>
+                        <ul>
+                            <li>Trách nhiệm của tác giả: Tác giả phải đảm bảo rằng các công trình nghiên cứu được công bố là công trình của chính họ, chưa được công bố ở bất kỳ đâu khác và không vi phạm quyền sở hữu trí tuệ.</li>
+                            <li>Trách nhiệm của nhà xuất bản: Tạp chí cam kết không can thiệp vào nội dung của bài báo và đảm bảo rằng tất cả các bài báo đều được xử lý công bằng và minh bạch.</li>
+                            <li>Đảm bảo bí mật: Thông tin của bài báo sẽ được giữ bí mật trong suốt quá trình đánh giá và xuất bản.</li>
+                            <li>Chống đạo văn: Tạp chí sử dụng phần mềm kiểm tra đạo văn để phát hiện các hành vi sao chép và đạo văn trong các bài báo.</li>
+                        </ul>
+    
+                        <p>Chúng tôi khuyến khích các tác giả, biên tập viên và phản biện báo cáo bất kỳ hành vi không đạo đức nào liên quan đến quá trình xuất bản. Mọi cáo buộc sẽ được xem xét nghiêm túc và điều tra đầy đủ để bảo vệ tính trung thực của tạp chí.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chính sách chung và các nguyên tắc -->
+    <div id="about_4" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Chính sách chung và các nguyên tắc</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>Chính sách về các nhóm lĩnh vực:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ bao gồm hai chuyên san với các lĩnh vực như sau:</p>
+                        
+                        <p><strong>(1) Chuyên san Khoa học Xã hội và Nhân văn</strong></p>
+                        <p>Các chuyên ngành được đề cập trong phần này có liên quan đến sự tiến bộ của khoa học xã hội và nhân văn trong bối cảnh Việt Nam và cộng đồng ASEAN, bao gồm nhưng không giới hạn ở Giáo dục học, Kinh tế và Quản lý, Luật học, Ngôn ngữ học, Sử học, Khảo cổ học, Dân tộc học, Nhân học, Tâm lý học, Triết học, Xã hội học, Chính trị học, Văn hoá, Nghệ thuật, Thể dục thể thao, Văn học. Khuyến khích các bài nộp có phạm vi rõ ràng liên quan đến Việt Nam hoặc liên quan đến ASEAN hoặc khu vực hoặc quốc tế nhưng phù hợp với độc giả Việt Nam hoặc ASEAN.</p>
+    
+                        <p><strong>(2) Chuyên san Khoa học Tự nhiên</strong></p>
+                        <p>Phần này xuất bản các tài liệu nghiên cứu hoặc đánh giá ban đầu liên quan đến sự phát triển của tất cả các loại khoa học và công nghệ lý thuyết và thực nghiệm bao gồm một số ngành khoa học tự nhiên, kỹ thuật và công nghệ, bao gồm nhưng không giới hạn ở Vật lý, Toán học, Sinh học, Hoá học, Công nghệ thực phẩm, Chăn nuôi, Thú y, Thuỷ sản, Công nghệ thông tin, Khoa học Trái đất - Mỏ, Nông nghiệp, Lâm nghiệp.</p>
+                        
+                        <p><strong>Chuyên san Khoa học Xã hội và Nhân văn</strong></p>
+                        <ul>
+                            <li>Mở bài nộp</li>
+                            <li>Đã lập chỉ mục</li>
+                            <li>Đã được bình duyệt</li>
+                        </ul>
+    
+                        <p><strong>Chuyên san Khoa học Tự nhiên</strong></p>
+                        <ul>
+                            <li>Mở bài nộp</li>
+                            <li>Đã lập chỉ mục</li>
+                            <li>Đã được bình duyệt</li>
+                        </ul>
+    
+                        <p><strong>Quá trình bình duyệt:</strong></p>
+                        <ul>
+                            <li>Bất kỳ bản thảo nào trong phạm vi của Tạp chí và hướng dẫn của tác giả sẽ được giao cho một biên tập viên chuyên san;</li>
+                            <li>Tất cả các bài viết trên Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ đều đã trải qua quá trình sàng lọc biên tập và phản biện kín hai chiều bởi ít nhất một chuyên gia độc lập bên ngoài trong lĩnh vực không thuộc Ban biên tập của Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ. Theo đó, người phản biện sẽ không biết thông tin tác giả và ngược lại. Người biên tập phần cuối cùng đưa ra quyết định biên tập, quyết định này phải được Tổng biên tập xác nhận. Quá trình gửi bài và phản biện được thực hiện hoàn toàn trực tuyến tại địa chỉ <a href="#">https://ctuet.vn/</a></li>
+                        </ul>
+    
+                        <p><strong>Chính sách truy cập mở:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ cung cấp quyền truy cập mở ngay lập tức vào nội dung của nó theo nguyên tắc cung cấp miễn phí nghiên cứu cho công chúng sẽ hỗ trợ trao đổi kiến thức toàn cầu nhiều hơn. Độc giả được phép đọc, tải xuống, sao chép, phân phối, in, tìm kiếm hoặc liên kết tới toàn văn các bài báo của Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ.</p>
+                        <p>Tất cả các bài báo do Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ xuất bản đều được cấp phép theo Giấy phép Quốc tế Creative Commons Ghi công-Phi thương mại 4.0 (CC BY-NC 4.0). Các độc giả được phép sao chép, phân phối, truyền tải và chuyển đổi với điều kiện bài báo và nguồn được trích dẫn để ghi nhận quyền tác giả của bài báo xuất bản trong Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ. Tác giả giữ bản quyền đối với bài báo của họ nhưng cấp cho Tạp chí quyền xuất bản tác phẩm đầu tiên.</p>
+    
+                        <p><strong>Lưu trữ:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ sử dụng hệ thống Lots of Copies Keep Stuff Safe (LOCKSS) để tạo các kho lưu trữ của Tạp chí nhằm mục đích bảo quản và phục hồi. Toàn văn tất cả các bài báo đăng trên Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ được lưu giữ trên mạng LOCKSS riêng của The PKP Preservation Network (PKP-PLN) để đảm bảo lưu giữ kỹ thuật số lâu dài.</p>
+    
+                        <p><strong>Lập chỉ mục và trừu tượng hóa:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ được lập chỉ mục và/hoặc tóm tắt trong các dịch vụ lập chỉ mục trong nước và quốc tế. Điều này cho phép hiển thị tối đa các bài viết đã xuất bản vì chúng có sẵn cho nhiều đối tượng, địa phương và toàn cầu.</p>
+    
+                        <p><strong>Danh sách:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ được đưa vào cơ sở dữ liệu Tạp chí khoa học Việt Nam trực tuyến - Vietnam Journals Online do Cục Thông tin Khoa học và Công nghệ Quốc gia, Bộ Khoa học và Công nghệ Nước Cộng hòa xã hội chủ nghĩa Việt Nam quản lý.</p>
+    
+                        <p><strong>Tư cách thành viên:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ đã được chấp nhận là thành viên của Crossref – Cơ quan đăng ký chính thức của Tổ chức Định danh Đối tượng Kỹ thuật số Quốc tế (IDF) từ tháng 6 năm 2021. Điều này giúp các kết quả nghiên cứu của bạn được công bố trên tạp chí của chúng tôi dễ dàng được tìm thấy, trích dẫn, liên kết, đánh giá và tái sử dụng.</p>
+    
+                        <p><strong>Phát hiện trùng lặp để đảm bảo tính liêm chính của bài viết và nghiên cứu:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ sử dụng hệ thống kiểm tra trùng lặp Turnitin và KiểmTraTàiLiệu, để sàng lọc đạo văn trước khi xuất bản.</p>
+    
+                        <p><strong>Tuyên bố từ chối trách nhiệm:</strong></p>
+                        <ul>
+                            <li>Trường Đại học Kỹ thuật Công nghệ Cần Thơ không bảo đảm và không chịu trách nhiệm hay nghĩa vụ pháp lý nào về tính chính xác hoặc đầy đủ của thông tin và tài liệu có trên trang web này. Trong mọi trường hợp, Trường sẽ không chịu trách nhiệm hoặc nghĩa vụ pháp lý dưới bất kỳ hình thức nào đối với bất kỳ khiếu nại, thiệt hại, tổn thất, phí tổn, chi phí hoặc trách nhiệm pháp lý nào (bao gồm nhưng không giới hạn bất kỳ thiệt hại trực tiếp hoặc gián tiếp nào về việc mất lợi nhuận, gián đoạn kinh doanh hoặc mất mát thông tin) là kết quả hoặc phát sinh trực tiếp hoặc gián tiếp từ việc bạn sử dụng hoặc không thể sử dụng các bài viết đăng trên Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ (cả bản in và bản trực tuyến).</li>
+                            <li>Những quan điểm, ý kiến thể hiện trong các bài viết đăng trên Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ không nhất thiết thể hiện hay phản ánh quan điểm, ý kiến ​​của Trường Đại học Kỹ thuật Công nghệ Cần Thơ với tư cách là cơ quan hoặc của Ban Biên tập Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tài trợ tạp chí -->
+    <div id="about_5" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Tài trợ tạp chí</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>Tài trợ và Chính sách Phí:</strong></p>
+                        <p>Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ được tài trợ bởi Trường Đại học Kỹ thuật Công nghệ Cần Thơ. Chính sách của Tạp chí là không tính phí nộp bài và phí xuất bản. Chúng tôi cam kết cung cấp quyền truy cập mở ngay lập tức vào nội dung của tạp chí theo nguyên tắc cung cấp nghiên cứu miễn phí cho công chúng, nhằm hỗ trợ việc trao đổi kiến thức toàn cầu.</p>
+    
+                        <p><strong>Cung cấp Bản in:</strong></p>
+                        <p>Mỗi tác giả và đồng tác giả sẽ nhận được một bản in miễn phí của tạp chí có bài viết được đăng, giao trực tiếp tại Tòa soạn hoặc qua đường bưu điện. Tác giả có thể đặt mua thêm bản in của tạp chí sau khi thanh toán trước phí token và phí bưu điện.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hướng dẫn -->
+    <!-- Hướng dẫn tác giả -->
+    <div id="guideli_tacgia" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Hướng dẫn tác giả</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>1. Quy định về trách nhiệm của tác giả:</strong></p>
+                        <ul>
+                            <li>Tác giả bài báo chịu trách nhiệm trước pháp luật về chất lượng, nội dung, tính hợp pháp của bài báo. Tác giả bài báo phải cam kết bài báo không có xung đột về lợi ích với các cá nhân, đơn vị, tổ chức xã hội.</li>
+                            <li>Tác giả bài báo phải tuân thủ quy định về đăng bài trên Tạp chí; chỉnh sửa, bổ sung và hoàn thiện bài báo theo yêu cầu của người phản biện và Hội đồng biên tập.</li>
+                            <li>Tác giả không được gửi bản thảo bài báo đang gửi cho Tạp chí Khoa học Đại học Kỹ thuật Công nghệ Cần Thơ đến tạp chí khác khi chưa có quyết định cuối cùng của Tổng biên tập.</li>
+                            <li>Tác giả phải trích dẫn rõ ràng, đầy đủ những ý tưởng, kết quả nghiên cứu liên quan đã được công bố và phải chịu trách nhiệm về kết quả nghiên cứu trùng lặp với các công bố khoa học ở nơi khác.</li>
+                            <li>Tác giả được rút lại bản thảo bài báo hoặc điều chỉnh, bổ sung thông tin của bài báo trong vòng 07 ngày kể từ khi gửi bài đến Tạp chí.</li>
+                            <li>Tác giả vi phạm về đạo đức nghiên cứu, Tạp chí sẽ từ chối nhận bài đăng trong vòng 02 năm.</li>
+                            <li>Tác giả gửi bản thảo bài báo cho tạp chí khác trong thời gian bản thảo bài báo đang được Tạp chí thực hiện quy trình phản biện, Tạp chí sẽ ngừng xét duyệt bản thảo bài báo này và không nhận bản thảo bài báo của tác giả gửi đăng trong vòng 02 năm.</li>
+                            <li>Bản thảo bài báo được Thư ký chuyên san yêu cầu chỉnh sửa lần thứ ba nhưng chưa đáp ứng thể lệ quy định, Tạp chí sẽ không tiếp nhận bản thảo bài báo đó.</li>
+                            <li>Bản thảo bài báo được phản biện và Ban Biên tập yêu cầu chỉnh sửa, đồng thời đã được Thư ký nhắc lần thứ hai nhưng vẫn trễ thời gian quy định thì Ban Biên tập sẽ không xem xét để đăng trên các số Tạp chí.</li>
+                        </ul>
+
+                        <p><strong>2. Quy định hình thức và kết cấu nội dung của bài báo:</strong></p>
+                        <ul>
+                            <li>Bản thảo bài báo gửi đăng phải là công trình nguyên tác, chưa từng được công bố hoặc đang gửi ở tạp chí khác. Bản thảo bài báo là những kết quả nghiên cứu khoa học hoặc bài tổng quan.</li>
+                            <li>Bản thảo được viết bằng tiếng Việt hoặc tiếng Anh, soạn thảo trên ứng dụng Microsoft Word và tuân thủ theo định dạng của Tạp chí.</li>
+                            <li>Bảng, biểu, hình vẽ được đặt đúng vị trí thể hiện và được gọi tên kèm số thứ tự bằng chữ số Ả Rập. Tên bảng, biểu ghi ở phía trên bảng, biểu; tên hình vẽ ghi ở phía dưới hình vẽ. Các công thức nên soạn thảo bằng công cụ Equation trên ứng dụng Microsoft Word hoặc phần mềm MathType.</li>
+                            <li>Trích dẫn và trình bày tài liệu tham khảo theo định dạng APA (the American Psychological Association reference style).</li>
+                            <li>Bài báo đăng trên Tạp chí có các thành phần nội dung sau:
+                                <ul>
+                                    <li>Tên bài báo; tên và địa chỉ của các tác giả; email của tác giả liên hệ; tóm tắt; từ khóa. Đối với bài báo viết bằng tiếng Việt thì phải thêm các thông tin về tên bài báo; tên và địa chỉ của các tác giả; tóm tắt; từ khóa bằng tiếng Anh.</li>
+                                    <li>Nội dung bài báo:
+                                        <ul>
+                                            <li>Giới thiệu (hoặc đặt vấn đề, hoặc dẫn nhập).</li>
+                                            <li>Tổng quan lý thuyết, lược sử nghiên cứu và phát triển giả thuyết (nếu có).</li>
+                                            <li>Dữ liệu (hoặc vật liệu) và phương pháp nghiên cứu.</li>
+                                            <li>Kết quả và thảo luận.</li>
+                                            <li>Kết luận và hàm ý chính sách (nếu có).</li>
+                                            <li>Tuyên bố về quyền lợi/Lời cảm ơn (nếu có).</li>
+                                            <li>Tài liệu tham khảo.</li>
+                                            <li>Phụ lục (nếu có).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p><strong>Hướng dẫn trình bày bản thảo bài báo:</strong> <a href="#">Tải về</a></p>
+                        <p><strong>Mẫu phiếu cung cấp thông tin tác giả:</strong> <a href="#">Tải về</a> (Tác giả phải nhập đầy đủ thông tin của tất cả tác giả bài viết vào Danh sách tác giả trong hệ thống khi thực hiện Gửi bài).</p>
+                        <p><strong>Mẫu phiếu giải trình chỉnh sửa bài báo:</strong> <a href="#">Tải về</a></p>
+
+                        <p><strong>3. Quy trình gửi bài báo:</strong></p>
+                        <ul>
+                            <li>Để gửi bản thảo bài báo cho Tạp chí, tác giả liên hệ cần đăng ký tài khoản với đầy đủ thông tin liên quan. Sau đó, thực hiện theo quy trình gửi bài trên hệ thống quản lý xuất bản trực tuyến của Tạp chí. Sau khi hoàn tất các bước trong quy trình gửi bài, tác giả liên hệ của bài báo sẽ nhận được email của Tạp chí về việc xác nhận quá trình gửi bài đã hoàn tất.</li>
+                            <li>Các bản thảo bài báo không đáp ứng yêu cầu quy định về hình thức và kết cấu của bài báo sẽ được gửi lại cho tác giả liên hệ để chỉnh sửa, hoàn thiện. Thời gian tác giả chỉnh sửa, hoàn thiện bản thảo bài báo không quá 30 ngày kể từ ngày nhận được email của Ban Thư ký Tạp chí. Thời gian nhận bài báo sẽ được tính từ khi Ban Thư ký nhận được bản thảo bài báo đáp ứng quy định về hình thức và kết cấu của bài báo.</li>
+                        </ul>
+
+                        <p><strong>4. Quy trình nhận bài:</strong></p>
+                        <ul>
+                            <li>Sau khi tiếp nhận bản thảo bài báo của tác giả, Ban Thư ký sẽ kiểm tra, rà soát các yêu cầu về mặt hình thức, đồng thời kiểm tra những vấn đề liên quan đến đạo đức trong nghiên cứu. Các bài báo không đáp ứng đúng quy định sẽ được gửi lại cho tác giả chỉnh sửa. Những bài báo đảm bảo quy định sẽ được Ban Thư ký chuyển đến Tổng biên tập (hoặc Phó Tổng biên tập được ủy quyền phụ trách chuyên san) tiến hành phân công một thành viên Hội đồng biên tập thẩm định sơ bộ nội dung để đưa ra quyết định có đưa bài báo đi phản biện hay không. Nếu có thì thành viên Hội đồng biên tập tiến hành mời người phản biện và theo dõi toàn bộ quá trình phản biện và biên tập bản thảo bài báo.</li>
+                            <li>Qua thẩm định sơ bộ của thành viên Hội đồng biên tập, nếu bản thảo bài báo không đáp ứng yêu cầu về mặt hình thức, chất lượng về nội dung thì sẽ bị từ chối tiếp nhận; và sẽ được Ban Thư ký thông báo đến tác giả trong vòng 07 ngày (kể từ ngày Ban Thư ký nhận được bản thảo bài báo) về việc từ chối tiếp nhận bản thảo bài báo.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hướng dẫn phản biện -->
+    <div id="guideli_phanbien" class="context">
+        <div class="layout-shared">
+            <div class="Content">
+                <header class="Content-header">
+                    <h2>Hướng dẫn phản biện</h2>
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+                        <p><strong>1. Quy định trách nhiệm của người phản biện:</strong></p>
+                        <ul>
+                            <li>Người phản biện bài báo cho Tạp chí phải có cùng chuyên môn hoặc gần với chuyên môn mà nội dung bài báo đề cập, có khả năng đánh giá chất lượng bài báo trong thời gian quy định.</li>
+                            <li>Người phản biện có trách nhiệm đánh giá nội dung khoa học của bài báo một cách khách quan, trung thực; hoàn thành công việc theo đúng yêu cầu của Tạp chí.</li>
+                            <li>Thời gian phản biện không quá 30 ngày kể từ thời điểm người phản biện nhận được nội dung bản thảo của bài báo.</li>
+                            <li>Người phản biện được trả thù lao theo Quy chế tài chính nội bộ của Trường Đại học Kỹ thuật Công nghệ Cần Thơ.</li>
+                            <li>Phản biện gửi trả bản nhận xét trễ quá 2 lần/1 bài; đánh giá bản thảo bài báo thiếu khách quan, có sai sót thì Ban Biên tập sẽ không tiếp tục mời phản biện.</li>
+                            <li>Người phản biện thực hiện quá trình phản biện theo hướng dẫn chi tiết tại đây.</li>
+                        </ul>
+
+                        <p><strong>2. Quy trình phản biện bài báo:</strong></p>
+                        <ul>
+                            <li>Đối với bản thảo bài báo được đưa vào quy trình bình duyệt, thành viên Hội đồng Biên tập quyết định mời người phản biện đáp ứng yêu cầu quy định.</li>
+                            <li>Người phản biện bình duyệt bản thảo bài báo theo các tiêu chuẩn và thời gian quy định. Cho ý kiến tư vấn về chất lượng bài báo theo các phương án, bao gồm:
+                                <ul>
+                                    <li>Phương án 1: Bài viết được chấp nhận đăng và không cần chỉnh sửa, bổ sung.</li>
+                                    <li>Phương án 2: Bài viết được chấp nhận đăng với điều kiện phải chỉnh sửa, bổ sung theo yêu cầu của người phản biện.</li>
+                                    <li>Phương án 3: Bài viết cần được chỉnh sửa, bổ sung và nộp lại cho Tạp chí để gửi đi phản biện lần hai.</li>
+                                    <li>Phương án 4: Bài viết không được chấp nhận đăng.</li>
+                                </ul>
+                            </li>
+                            <li>Trên cơ sở ý kiến tư vấn của người phản biện và ý kiến đánh giá cá nhân của thành viên Hội đồng Biên tập, thành viên Hội đồng Biên tập ra quyết định theo một trong các phương án trên. Quyết định của thành viên Hội đồng Biên tập không nhất thiết phải thống nhất với ý kiến tư vấn của người phản biện.</li>
+                            <li>Thành viên Hội đồng Biên tập phản hồi kết quả bình duyệt bản thảo bài báo cho tác giả liên hệ, kèm theo (các) bản nhận xét bài báo của (các) người phản biện và của chính thành viên Hội đồng Biên tập (nếu có). Trường hợp quyết định của thành viên Hội đồng Biên tập thuộc phương án 2 hoặc phương án 3, thành viên Hội đồng Biên tập cần ấn định một khoảng thời gian phù hợp để tác giả chỉnh sửa, bổ sung bài báo theo yêu cầu, nhưng trong mọi trường hợp không được vượt quá 90 ngày, trừ khi được sự đồng ý của Tổng Biên tập.</li>
+                            <li>Tác giả thực hiện chỉnh sửa, bổ sung bản thảo bài báo theo yêu cầu của người phản biện và thành viên Hội đồng Biên tập. Tác giả được yêu cầu viết một giải trình phản hồi dành cho (các) người phản biện và thành viên Hội đồng Biên tập (nếu có), trong đó chỉ rõ những nội dung của bài báo đã được chỉnh sửa, bổ sung theo yêu cầu, cũng như những nội dung mà tác giả muốn bảo lưu, kèm theo lý do giải thích việc bảo lưu này.</li>
+                            <li>Trường hợp bài báo phương án 2, thành viên Hội đồng Biên tập căn cứ vào (các) bản phản hồi của tác giả, ra quyết định chấp nhận bài báo hoặc yêu cầu tác giả tiếp tục chỉnh sửa, hoàn thiện bài báo.</li>
+                            <li>Trường hợp bài báo thuộc phương án 3, thành viên Hội đồng Biên tập căn cứ vào (các) bản phản hồi của tác giả, lựa chọn một trong những phương án sau:
+                                <ul>
+                                    <li>Thành viên Hội đồng đánh giá bài báo đã được chỉnh sửa, bổ sung và ra quyết định chấp nhận hoặc từ chối bài báo, hoặc yêu cầu tác giả tiếp tục chỉnh sửa, hoàn thiện bài báo.</li>
+                                    <li>Thành viên Hội đồng gửi bản thảo bài báo đã được chỉnh sửa, bổ sung và (các) bản phản hồi của tác giả cho người phản biện ban đầu để thẩm định lại bài báo. Quy trình phản biện bài báo bắt đầu lại từ đầu.</li>
+                                    <li>Thành viên Hội đồng gửi bản thảo bài báo đã được chỉnh sửa, bổ sung cho một người phản biện khác để thẩm định lại bài báo. Quy trình phản biện bài báo bắt đầu lại từ đầu.</li>
+                                </ul>
+                            </li>
+                            <li>Tất cả các bài báo hoàn tất quy trình phản biện và được chấp nhận đăng sẽ được chuyển qua quy trình biên tập trước khi xuất bản. Ban Thư ký chịu trách nhiệm tổ chức biên tập và xuất bản Tạp chí.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Biên tập -->
+    <div id="editing" class="context">
+        <div class="layout-shared">
+            <h1>Biên tập</h1>
+            <p>Thông tin về biên tập.</p>
+        </div>
+    </div>
+
+    <!-- Lưu trữ -->
+    <div id="archiving" class="context active">
+        <div class="layout-shared">
+            <nav class="cmp-breadcrumb">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="">Trang chủ</a>
+                    </li>
+                    <li>
+                        Lưu trữ
+                    </li>                    
+                </ol>
+            </nav>
+            <div class="Content">
+                <header class="Content-header">
+                    
+                </header>
+                <article class="Content-main">
+                    <div class="Content-text">
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gửi bài -->
+    <div id="submission" class="context">
+        <div class="layout-shared">
+            <h1>Gửi bài</h1>
+            <p>Thông tin về gửi bài.</p>
+        </div>
+    </div>
+
+
+    
+    
+
+    <div class="footer">
+        <div class="footer-1">
+            <img src="ass/img/logo.png" alt="Logo">
+            <h4>Trường Đại học <br>Kỹ thuật công nghệ Cần Thơ</h4>
+        </div>
+        <div class="footer-2">
+            <h5>Tạp chí Khoa học Trường Đại học kỹ thuật công nghệ Cần Thơ</h5>
+            <p>Cơ quan chủ quản: Trường Đại học kỹ thuật công nghệ Cần Thơ</p>
+            <p>Địa chỉ: 256 Nguyễn Văn Cừ, Quận Ninh Kiều, Thành phố Cần Thơ</p>
+            <p>Giấy phép hoạt động Tạp chí in và Tạp chí điện tử số 560/GP-BTTTT của Bộ Thông tin và Truyền thông cấp ngày 25/11/2022.</p>
+            <p>Bản quyền © 2023 Tạp chí Khoa học Trường Đại học kỹ thuật công nghệ Cần Thơ</p>
+        </div>
+        <div class="footer-3">
+            <h5>Ban biên tập</h5>
+            <p>Tổng Biên tập: Nguyễn Thị Thành Thanh</p>
+            <p>Phó Tổng Biên tập: Nguyễn Hoàng Cát Tuấn</p>
+            <p>Website: <a href="https://ctuet.edu.vn/index.php">ctuet.edu.vn</a></p>
+            <p>Email: phonghanhchinh@ctuet.edu.vn</p>
+            <p>Điện thoại: 02923894050</p>
+        </div>
+    </div>
+    <script src="ass/JavaScript.js"></script>
+</body>
+
+</html>
