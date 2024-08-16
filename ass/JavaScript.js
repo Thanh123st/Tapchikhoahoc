@@ -49,3 +49,10 @@ function showContext(contextId) {
         context.classList.add('active');
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var content = document.querySelector('.layout-shared');
+    if (content.offsetHeight < 500) {
+        content.style.height = '500px';
+    }
+});
