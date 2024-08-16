@@ -43,7 +43,6 @@ header img,
 }
 
 
-
 #home-icon{
     font-size: 18px;
     padding: 4px 6px;
@@ -151,10 +150,11 @@ header img,
 @media (max-width: 800px) {
     .Navigation {
         padding: 0;
-        
+        padding-top: 5px;
     }
 
     .nav-menu {
+        display: none;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -212,7 +212,52 @@ header img,
     } 
 
     
+    
 }
+
+
+/* Nút toggle */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    box-shadow: none;
+    
+}
+
+/* Hiển thị nút Hamburger trên màn hình nhỏ */
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: block;
+        margin-left: 20px;
+        
+        border: #06005b 2px solid;
+        border-radius: 5px;
+        
+    }
+    .nav-toggle:hover{
+        background-color: #1a51a4;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.menu-open {
+        display: flex;
+    }
+
+    .nav-toggle:hover{
+
+    }
+}
+
+
 
 /* Body */
 .layout {

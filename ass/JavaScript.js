@@ -56,3 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
         content.style.height = '500px';
     }
 });
+
+
+document.querySelector('.nav-toggle').addEventListener('click', function () {
+    document.querySelector('.nav-menu').classList.toggle('menu-open');
+});
