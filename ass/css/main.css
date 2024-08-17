@@ -23,6 +23,10 @@ header img,
     .layout-shared{
         margin:0;
     }
+
+    .layout-login{
+        margin: 0;
+    }
 }
 
 .Navigation {
@@ -251,9 +255,6 @@ header img,
         display: flex;
     }
 
-    .nav-toggle:hover{
-
-    }
 }
 
 
@@ -273,6 +274,15 @@ header img,
     background-color: white;
     margin: 0 3%;
     display: grid;
+}
+
+.layout-login{
+    height: fit-content;
+    background-color: white;
+    margin: 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Breadcrumb */
@@ -463,10 +473,10 @@ header img,
         margin: 0;
     }
 
-    .layout-shared{
+    .layout-login,.layout-shared{
         margin: 0;
     }
-    
+
     .Content, .slide-bar {
         grid-column: 1;
     }
@@ -536,7 +546,181 @@ header img,
     }
 }
 
+/* Đăng ký */
 
+.registration-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+}
 
+.registration-container h2{
+    margin-bottom: 20px;
+    color: #007bff; /* Màu xanh dương */
+}
 
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #333333; /* Màu đen */
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.required {
+    color: red;
+}
+
+.register-btn {
+    background-color: #007bff; /* Màu xanh dương */
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm hơn khi hover */
+}
+
+/* Đăng nhập */
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #007bff; /* Màu xanh dương */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #333333; /* Màu đen */
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #007bff; /* Màu xanh dương */
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #007bff; /* Màu xanh dương */
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm hơn khi hover */
+}
+
+@media (max-width: 768px) {
+    .registration-container,
+    .login-container {
+        padding: 15px; /* Giảm padding cho các container */
+        max-width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng màn hình */
+    }
+
+    .registration-container h2,
+    .login-container h2 {
+        font-size: 18px; /* Giảm kích thước chữ của tiêu đề */
+    }
+
+    .input-group label {
+        font-size: 12px; /* Giảm kích thước chữ của nhãn */
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 14px; /* Giảm kích thước chữ của input và select */
+        padding: 8px; /* Giảm padding cho các ô input và select */
+    }
+
+    .register-btn,
+    .login-btn {
+        font-size: 14px; /* Giảm kích thước chữ của nút đăng ký và đăng nhập */
+        padding: 10px; /* Giảm padding cho các nút */
+    }
+
+    .options{
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
 

@@ -50,7 +50,7 @@ function showContext(contextId) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded1", function() {
     var content = document.querySelector('.layout-shared');
     if (content.offsetHeight < 500) {
         content.style.height = '500px';
@@ -61,3 +61,4 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     document.querySelector('.nav-menu').classList.toggle('menu-open');
 });
+
