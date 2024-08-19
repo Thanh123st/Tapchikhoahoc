@@ -1,3 +1,7 @@
+body{
+    max-width: 2000px;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;

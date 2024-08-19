@@ -17,10 +17,18 @@
     <div id="footer"></div>
     
     <script>
-        window.onload = function() {
-            loadContent('/includes/banner.html', 'banner');
-            loadContent('/includes/footer.html', 'footer');
-        }
+        function loadContent(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        });
+}
+
+window.onload = function() {
+    loadContent('/includes/banner.html', 'banner');
+    loadContent('/includes/footer.html', 'footer');
+}
     </script>
     <script src="ass/JavaScript.js"></script>
 </body>
