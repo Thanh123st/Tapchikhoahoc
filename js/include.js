@@ -9,8 +9,8 @@ function loadContent(url, elementId, callback) {
 }
 
 window.onload = function() {
-    loadContent('includes/banner.html', 'banner', initializeBanner);
-    loadContent('includes/footer.html', 'footer', initializeFooter);
+    loadContent('./includes/banner.html', 'banner', initializeBanner);
+    loadContent('./includes/footer.html', 'footer', initializeFooter);
 };
 
 function initializeBanner() {
