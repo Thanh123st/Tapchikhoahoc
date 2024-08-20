@@ -6,61 +6,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Đăng Ký</title>
-    <link rel="stylesheet" href="/ass/css/base.css">
-    <link rel="stylesheet" href="/ass/css/main.css">
+    <link rel="stylesheet" href="./ass/css/base.css">
+    <link rel="stylesheet" href="./ass/css/main.css">
 </head>
 <body>
-    <div class="Banner">
-        <header>
-            <img src="/ass/img/CTUET.png" alt="Banner">
-        </header>
-        <div class="Navigation">
-            <button class="nav-toggle">&#9776;</button>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="" onclick="showContext('home'); return false;"><i class="fa fa-home" id="home-icon"></i></a>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link"><a href="#">Giới thiệu</a><i class="fa-solid fa-sort-down"></i></div>
-                    <div class="nav-item-hidden">
-                        <a href="" onclick="showContext('about_1'); return false;">Mục đích và phạm vi của tạp chí</a>
-                        <a href="" onclick="showContext('about_2'); return false;">Tần suất xuất bản</a>
-                        <a href="" onclick="showContext('about_3'); return false;">Biên tập và đạo đức xuất bản</a>
-                        <a href="" onclick="showContext('about_4'); return false;">Chính sách chung và các nguyên tắc</a>
-                        <a href="" onclick="showContext('about_5'); return false;">Tài trợ tạp chí</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div  class="nav-link"><a href="#">Hướng dẫn</a><i class="fa-solid fa-sort-down"></i></div>
-                    <div class="nav-item-hidden">
-                        <a href="" onclick="showContext('guideli_tacgia'); return false;">Hướng dẫn tác giả</a>
-                        <a href="" onclick="showContext('guideli_phanbien'); return false;">Hướng dẫn phản biện</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="" onclick="showContext('editing'); return false;">Biên tập</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" onclick="showContext('archiving'); return false;">Lưu trữ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" onclick="showContext('submission'); return false;">Gửi bài</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/LoginRegester/dangnhap.html">Đăng nhập</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/LoginRegester/dangky.html">Đăng ký</a>
-                </li>
-                
-                
-            </ul>
-            <div class="nav-search">
-                <input type="text" name="search" placeholder="Tìm kiếm">
-                <button type="submit" style="cursor: pointer;"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </div>
-        </div>
-    </div>
+   <div id="banner"></div>
+
     <div class="layout-login">
         <div class="registration-container">
             <h2>Đăng Ký</h2>
@@ -121,28 +72,9 @@
         </div>
     </div>
     
-    
-    <div class="footer">
-        <div class="footer-1">
-            <img src="/ass/img/logo.png" alt="Logo">
-            <h4>Trường Đại học <br>Kỹ thuật công nghệ Cần Thơ</h4>
-        </div>
-        <div class="footer-2">
-            <h5>Tạp chí Khoa học Trường Đại học kỹ thuật công nghệ Cần Thơ</h5>
-            <p>Cơ quan chủ quản: Trường Đại học kỹ thuật công nghệ Cần Thơ</p>
-            <p>Địa chỉ: 256 Nguyễn Văn Cừ, Quận Ninh Kiều, Thành phố Cần Thơ</p>
-            <p>Giấy phép hoạt động Tạp chí in và Tạp chí điện tử số 560/GP-BTTTT của Bộ Thông tin và Truyền thông cấp ngày 25/11/2022.</p>
-            <p>Bản quyền © 2023 Tạp chí Khoa học Trường Đại học kỹ thuật công nghệ Cần Thơ</p>
-        </div>
-        <div class="footer-3">
-            <h5>Ban biên tập</h5>
-            <p>Tổng Biên tập: Nguyễn Thị Thành Thanh</p>
-            <p>Phó Tổng Biên tập: Nguyễn Hoàng Cát Tuấn</p>
-            <p>Website: <a href="https://ctuet.edu.vn/index.php">ctuet.edu.vn</a></p>
-            <p>Email: phonghanhchinh@ctuet.edu.vn</p>
-            <p>Điện thoại: 02923894050</p>
-        </div>
-    </div>
-    <script src="/ass/JavaScript.js"></script>
+    <div id="footer"></div>
+
+    <script src="./js/include.js"></script>
+    <script src="./ass/JavaScript.js"></script>
 </body>
 </html>

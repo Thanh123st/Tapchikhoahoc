@@ -7,6 +7,6 @@ function loadContent(url, elementId) {
 }
 
 window.onload = function() {
-    loadContent('/includes/banner.html', 'banner');
-    loadContent('/includes/footer.html', 'footer');
+    loadContent('./includes/banner.html', 'banner');
+    loadContent('./includes/footer.html', 'footer');
 }

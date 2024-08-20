@@ -498,8 +498,8 @@ header img,
 /* Footer */
 .footer {
     display: grid;
-    grid-template-columns: 25% 40% 25%;
-    padding: 10px 8%;
+    grid-template-columns: 28% 40% 22%;
+    padding: 10px 6%;
     gap: 20px;
     border-top: 5px black solid;
     background-color: #0444d4;
@@ -512,7 +512,7 @@ header img,
 
 .footer-1 {
     text-align: center;
-    font-size: 60%;
+    width: fit-content;
 }
 
 .footer-1 img {
