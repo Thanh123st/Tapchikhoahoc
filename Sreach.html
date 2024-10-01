@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <title>Tìm kiếm</title>
+    <link rel="icon" href="ass/img/logo.png" type="image/x-icon">
+
+    <style>
+        select{
+            margin: 0 5px;
+        }
+        
+        h5{
+            margin: 10px 10px;
+        }
+        @media only screen and (max-width: 768px) {
+            select{
+                margin: 0;
+            }
+
+            table{
+                font-size: 70%;
+            }
+            #text-sreach-Media{
+                margin-bottom: 5px;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="/ass/css/base.css">
+    <link rel="stylesheet" href="/ass/css/main.css">
+
+    
+    
+</head>
+<body>
+    <div id="banner"></div>
+    
+    <div class="layout-shared">
+        <!-- Nội dung chính -->
+        <div class="Content">
+            <header class="Content-header">
+                <h2>Tìm kiếm</h2>
+            </header>
+            <main class="container-fluid">
+                <section class="col-auto form-inline input-group">
+                    <input type="text" id="text-sreach-Media" class="input-group-text input-group form-control">
+                    <button type="button" id="btn-sreach-Media" class="input-group btn btn-outline-secondary">Tìm kiếm</button>
+                </section>
+                <h5><strong>Tìm kiếm nâng cao</strong></h5>
+                <section class="sreach-deatail">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="dateFromYear">
+                                Xuất bản từ:
+                            </label>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <select name="dateFromYear">
+                                    <option value="">Năm</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    </select>
+                                    <select name="dateFromMonth">
+                                    <option value="">Tháng</option>
+                                    <option value="01">Một</option>
+                                    <option value="02">Hai</option>
+                                    <option value="03">Ba</option>
+                                    <option value="04">Bốn</option>
+                                    <option value="05">Năm</option>
+                                    <option value="06">Sáu</option>
+                                    <option value="07">Bảy</option>
+                                    <option value="08">Tám</option>
+                                    <option value="09">Chín</option>
+                                    <option value="10">Mười</option>
+                                    <option value="11">Mười một</option>
+                                    <option value="12">Mười hai</option>
+                                    </select>
+                                    <select name="dateFromDay">
+                                    <option value="">Ngày</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateToYear">
+                                Xuất bản đến:
+                            </label>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <select name="dateToYear">
+                                    <option value="">Năm</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    </select>
+                                    <select name="dateToMonth">
+                                    <option value="">Tháng</option>
+                                    <option value="01">Một</option>
+                                    <option value="02">Hai</option>
+                                    <option value="03">Ba</option>
+                                    <option value="04">Bốn</option>
+                                    <option value="05">Năm</option>
+                                    <option value="06">Sáu</option>
+                                    <option value="07">Bảy</option>
+                                    <option value="08">Tám</option>
+                                    <option value="09">Chín</option>
+                                    <option value="10">Mười</option>
+                                    <option value="11">Mười một</option>
+                                    <option value="12">Mười hai</option>
+                                    </select>
+                                    <select name="dateToDay">
+                                    <option value="">Ngày</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="authors">
+                                Tác giả
+                            </label>
+                            <input class="input-group-text input-group" type="text" for="authors"  id="searchInput">
+                        </div>
+                    </div>
+                </section>
+                <h5>Danh sách kết quả tìm kiếm</h5>
+                <div class="" id="list-sreach-media">
+                    <div class="media-body">
+                        <div class="col-md-12 pl-0">
+                            <a class="article-title" href="">
+                                <span>Thực trạng quản lý hoạt động giáo dục địa phương cho học sinh ở các trường tiểu học huyện Tam Nông, tỉnh Đồng Tháp</span>
+                            </a>
+                            <div class="meta">
+                                <div class="authors pb-0">
+                                    Trần Đại Nghĩa, Nguyễn Ngọc Thiên Trung
+                                </div>
+                            </div>
+                            <a class="btn btn-borders btn-xs btn-outline float-right pointer-events-none">Trang: 1-10</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+
+        </div>
+        
+        
+    </div>
+    
+    <div id="footer"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/ass/JavaScript.js"></script>
+</body>
+</html>

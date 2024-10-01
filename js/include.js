@@ -8,10 +8,14 @@ function loadContent(url, elementId, callback) {
         .catch(error => console.error('Error loading content:', error));
 }
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Mã của bạn ở đây
     loadContent('/includes/banner.html', 'banner', initializeBanner);
     loadContent('/includes/footer.html', 'footer', initializeFooter);
-};
+    loadContent('/includes/ad_banner.html','ad_banner',initializeFooter)
+});
+
+
 
 function initializeBanner() {
     const navItems = document.querySelectorAll('.nav-item');
@@ -46,8 +50,16 @@ function initializeBanner() {
             }
         });
     });
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('menu-open');
+        });
+    }
+    
 }
 
 function initializeFooter() {
-    // Code khởi tạo cho footer nếu cần
+    
 }

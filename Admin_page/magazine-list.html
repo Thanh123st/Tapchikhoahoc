@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tạo Tạp Chí</title>
+    <link rel="stylesheet" href="/ass/css/base.css">
+    <link rel="stylesheet" href="/ass/css/main.css">
+    <link rel="stylesheet" href="/ass/css/index.css">
+</head>
+<body>
+    <div id="ad_banner"></div>
+
+
+    <main class="container">
+        <header>Danh sách tạp chí</header>
+    </main>
+
+    <footer class="ad_footer">
+        <p>&copy; 2024 Tạp Chí Khoa Học</p>
+    </footer>
+
+    <script src="/js/include.js"></script>
+    <script src="/ass/JavaScript.js"></script>
+    <script>
+        //Tạo danh sách bài viết 
+
+
+        // Example article options
+const articles = [
+    { id: 1, title: 'Bài viết về AI' },
+    { id: 2, title: 'Bài viết về Machine Learning' },
+    // Add more articles here
+];
+
+// Define a custom event
+const loadtapchiEvent = new Event('loadtapchi');
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Dispatch the custom event when the DOM is ready
+    document.dispatchEvent(loadtapchiEvent);
+});
+
+// Listen for the custom event
+document.addEventListener('loadtapchi', function() {
+    const articleSelect = document.getElementById('articleSelect');
+    const selectedArticles = document.getElementById('selectedArticles');
+
+    // Populate the select element with article options
+    articles.forEach(article => {
+        const option = document.createElement('option');
+        option.value = article.id;
+        option.textContent = article.title;
+        articleSelect.appendChild(option);
+    });
+
+    window.addArticle = function() {
+        const selectedOption = articleSelect.options[articleSelect.selectedIndex];
+        if (selectedOption) {
+            const listItem = document.createElement('li');
+            listItem.textContent = selectedOption.textContent;
+
+            // Create a button to remove the item
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Xóa';
+            removeBtn.className = 'ad_btn ad_btn_delete';
+            removeBtn.onclick = function() {
+                removeArticle(listItem, selectedOption);
+            };
+
+            listItem.appendChild(removeBtn);
+            selectedArticles.appendChild(listItem);
+
+            // Remove the selected article from the dropdown
+            articleSelect.removeChild(selectedOption);
+        }
+    }
+
+    window.removeArticle = function(listItem, option) {
+        // Add the removed article back to the select dropdown
+        const newOption = document.createElement('option');
+        newOption.value = option.value;
+        newOption.textContent = option.textContent;
+        articleSelect.appendChild(newOption);
+
+        // Remove the item from the list
+        selectedArticles.removeChild(listItem);
+    }
+});
+
+    </script>
+</body>
+</html>
