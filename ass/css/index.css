@@ -146,6 +146,7 @@ ul{
 
 .pkpListPanel__content{
     background-color: white;
+    padding-top: 20px;
 }
 
 
@@ -599,10 +600,12 @@ ul{
 
 /* DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDdd */ 
 
-/* ADMIN */
+/* ADMIN * /
 /* Header */
+/* #89a8c9 */
+
 .ad_header {
-    background-color: #007bff;
+    background-color: #89a8c9;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -695,7 +698,7 @@ ul{
 }
 
 .ad_table th {
-    background-color: #007bff;
+    background-color: #89a8c9;
     color: white;
 }
 

@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="/ass/css/main.css">
     <link rel="stylesheet" href="/ass/css/index.css">
 
-    <style>
-        
-    </style>
+    
 
 </head>
 
@@ -119,41 +117,22 @@
                         </div>
     
     
-                        <table id="danhSachDongTacGia" class="pkp_ui_author_table">
+                        <table class="pkp_ui_coauthor_Table" id="coauthorsTable" border="1">
                             <colgroup>
-                                <col style="width: 20%;">
-                                <col style="width: 40%;">
-                                <col style="width: 10%;">
-                                <col style="width: 5%">
+                                <col style="width: 30%;">
+                                <col style="width: 30%;">
+                                <col style="width: 30%;">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">Tên</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Vai trò</th>
-                                    <th scope="col" style="border: none;"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-    
-                                <tr>
-                                    <td>
-                                        <span>{{{Auth::user()->first_name }}}</span>
-                                    </td>
-                                    <td>
-                                        <span>{{{Auth::user()->email }}}</span>
-                                    </td>
-    
-                                    <td>
-                                        @if (Auth::user() && Auth::user()->tacGiaBaiViet)
-                                            <span>{{ Auth::user()->tacGiaBaiViet->vai_tro }}</span>
-                                        @else
-                                            <span>Không có thông tin vai trò</span>
-                                        @endif
-                                    </td>
+                                    <th>Tên</th>
+                                    <th>Email</th>
+                                    <th>Vai trò</th>
                                     
                                 </tr>
-    
+                            </thead>
+                            <tbody class="pkp_ui_coauthor_tbody">
+                                <!-- Các đồng tác giả sẽ được thêm vào đây -->
                             </tbody>
                         </table>
                     </div>
@@ -194,24 +173,25 @@
 
                 <div class="overlay" id="overlay1">
                     <div class="popup">
+
                         <h3>Thêm đồng tác giả</h3>
-                        <form id="authorForm">
-                            <div class="pkp_ui_textfill_div">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                        <h3>Thêm đồng tác giả</h3>
+                        <form id="coAuthorForm">
+                            <div id="pkp_ui_coauthor_form">
+                                <div class="pkp_ui_coauthor_form-control">
+                                    <label for="coauthor-name[]">Tên</label>
+                                    <input type="text" name="coauthor_names[]" class="pkp_ui_coauthor_form-control" required><br>
+                                    <label for="coauthor-email[]">Email</label>
+                                    <input type="email" name="coauthor_emails[]" class="pkp_ui_coauthor_form-control" required><br>
+                                    <label for="coauthor-role[]">Vai trò</label>
+                                    <select name="coauthor_roles[]" class="pkp_ui_coauthor_form-control" required>
+                                        <option value="Phản biện">Phản biện</option>
+                                        <option value="Đồng tác giả">Đồng tác giả</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="pkp_ui_textfill_div">
-                                <label for="name">Tên:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="pkp_ui_textfill_div">
-                                <label><strong>Vai trò:</strong></label><br>
-                                <input type="radio" id="vaitro1" name="option" value="option1" required>
-                                <label for="option1">Đồng tác giả</label><br>
-                                <input type="radio" id="vaitro2" name="option" value="option2">
-                                <label for="option2">Phản biện</label>
-                            </div>
-                            <button type="submit" class="submit-btn">Xác nhận thêm tác giả</button>
+                            <button type="button" class="pkp_ui_coauthor_btn" id="add-coauthor">Thêm đồng tác giả mới</button>
+                            <button type="button" class="pkp_ui_coauthor_btn" id="save-coauthors">Lưu tất cả</button>
                         </form>
                         <button onclick="closePopup(1)">Đóng</button>
                     </div>
@@ -244,14 +224,13 @@
 
 
 
-
-
+            
             </div>
         </div>
     </div>
 
-
-
+    
+    
     <script src="/js/include.js"></script>
     <script src="/ass/JavaScript.js"></script>
 </body>

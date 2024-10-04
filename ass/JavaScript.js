@@ -43,6 +43,66 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('menu-open');
         });
     }
+
+    document.getElementById('add-coauthor').addEventListener('click', function() {
+        var container = document.getElementById('pkp_ui_coauthor_form');
+        var newForm = document.createElement('div');
+        newForm.className = 'pkp_ui_coauthor_form-control';
+        newForm.innerHTML = `
+            <label for="coauthor-name[]">Tên</label>
+            <input type="text" name="coauthor_names[]" class="pkp_ui_coauthor_form-control" required><br>
+            <label for="coauthor-email[]">Email</label>
+            <input type="email" name="coauthor_emails[]" class="pkp_ui_coauthor_form-control" required><br>
+            <label for="coauthor-role[]">Vai trò</label>
+            <select name="coauthor_roles[]" class="pkp_ui_coauthor_form-control" required>
+                <option value="Phản biện">Phản biện</option>
+                <option value="Đồng tác giả">Đồng tác giả</option>
+            </select>
+        `;
+        container.appendChild(newForm);
+    });
+    
+    document.getElementById('save-coauthors').addEventListener('click', function() {
+        var names = document.querySelectorAll('input[name="coauthor_names[]"]');
+        var emails = document.querySelectorAll('input[name="coauthor_emails[]"]');
+        var roles = document.querySelectorAll('select[name="coauthor_roles[]"]');
+        var tableBody = document.querySelector('.pkp_ui_coauthor_tbody');
+    
+        tableBody.innerHTML = ''; // Xóa nội dung cũ
+    
+        for (var i = 0; i < names.length; i++) {
+            var nameValue = names[i].value;
+            var emailValue = emails[i].value;
+            var roleValue = roles[i].value;
+    
+            if (nameValue && emailValue && roleValue) {
+                var row = document.createElement('tr');
+                var nameCell = document.createElement('td');
+                nameCell.textContent = nameValue;
+                var emailCell = document.createElement('td');
+                emailCell.textContent = emailValue;
+                var roleCell = document.createElement('td');
+                roleCell.textContent = roleValue;
+                var actionCell = document.createElement('td');
+                var deleteButton = document.createElement('button');
+                deleteButton.className = 'ui-delete-btn';
+                deleteButton.textContent = 'Xóa';
+                deleteButton.addEventListener('click', function() {
+                    this.parentElement.parentElement.remove(); // Xóa dòng khi nhấn nút
+                });
+                actionCell.appendChild(deleteButton);
+    
+                row.appendChild(nameCell);
+                row.appendChild(emailCell);
+                row.appendChild(roleCell);
+                row.appendChild(actionCell);
+    
+                tableBody.appendChild(row);
+            }
+        }
+    });
+
+
     document.getElementById('add-citation').addEventListener('click', function() {
         var container = document.getElementById('pkp_ui_references_citation-form');
         var newForm = document.createElement('div');
@@ -55,44 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         container.appendChild(newForm);
     });
-    
-    document.querySelector('.submit-btn').addEventListener('click', function(event) {
-        event.preventDefault();
         
-        var email = document.getElementById('email').value;
-        var name = document.getElementById('name').value;
-        var role = document.querySelector('input[name="option"]:checked').nextElementSibling.textContent;
-        
-        var tableBody = document.querySelector('#danhSachDongTacGia tbody');
-        
-        if (email && name && role) {
-            var row = document.createElement('tr');
-            var nameCell = document.createElement('td');
-            nameCell.textContent = name;
-            var emailCell = document.createElement('td');
-            emailCell.textContent = email;
-            var roleCell = document.createElement('td');
-            roleCell.textContent = role;
-            var actionCell = document.createElement('td');
-            actionCell.innerHTML = '<button class="ui-delete-btn">Xóa</button>';
-            
-            row.appendChild(nameCell);
-            row.appendChild(emailCell);
-            row.appendChild(roleCell);
-            row.appendChild(actionCell);
-            
-            tableBody.appendChild(row);
-            
-            // Xóa dữ liệu trong form sau khi submit
-            document.getElementById('email').value = '';
-            document.getElementById('name').value = '';
-            document.querySelector('input[name="option"]:checked').checked = false;
-        } else {
-            alert("Vui lòng điền đầy đủ thông tin!");
-        }
-    });
-    
-    
     document.getElementById('save-citations').addEventListener('click', function() {
         var titles = document.querySelectorAll('input[name="titles[]"]');
         var links = document.querySelectorAll('input[name="links[]"]');
@@ -151,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toDay = document.querySelector('select[name="dateToDay"]');
 
     
-
+    
     
     
 });
@@ -194,20 +217,21 @@ function getCurrentDate() {
     return day + "/" + month + "/" + year;
 }
 
-// Hàm kiểm tra xem có tệp nào không và hiển thị thông báo tương ứng
 function checkFileExistence() {
     var fileTableBody = document.getElementById('file-table-body');
     var noFileMessage = document.getElementById('no-file-message');
 
     if (fileTableBody.children.length === 0) {
-        noFileMessage.style.display = 'table-row-group'; // Hiển thị thông báo không có tệp
+        noFileMessage.style.display = 'block'; // Hiển thị thông báo không có tệp
     } else {
         noFileMessage.style.display = 'none'; // Ẩn thông báo không có tệp
     }
 }
 
-// Gọi hàm kiểm tra khi trang được tải
-window.onload = checkFileExistence;
+// Gọi hàm kiểm tra khi DOM đã được tải xong
+document.addEventListener('DOMContentLoaded13', function() {
+    checkFileExistence();
+});
 
 
 
@@ -317,10 +341,8 @@ function toggleDetails(button) {
 }
 
 
-
-
-function filterTable(query) {
-    const rows = document.querySelectorAll('#table-body tr');
+function filterTable(tableBodyId, query) {
+    const rows = document.querySelectorAll(`#${tableBodyId} tr`);
     rows.forEach(row => {
         const cells = row.querySelectorAll('td');
         let match = false;
@@ -333,10 +355,18 @@ function filterTable(query) {
     });
 }
 
-// Lắng nghe sự kiện nhập liệu vào ô tìm kiếm
-document.getElementById('searchInput').addEventListener('input', function() {
-    filterTable(this.value);
-});
+// Áp dụng cho nhiều ô tìm kiếm và bảng khác nhau
+function setUpFilter(searchInputId, tableBodyId) {
+    document.getElementById(searchInputId).addEventListener('input', function() {
+        filterTable(tableBodyId, this.value);
+    });
+}
+
+// Sử dụng hàm này cho nhiều bảng và ô tìm kiếm khác nhau
+setUpFilter('searchInput', 'table-body');
+setUpFilter('searchInput2', 'table-body2');
+
+
 
 
 // Hàm hiển thị popup

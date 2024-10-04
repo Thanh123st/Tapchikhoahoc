@@ -998,6 +998,11 @@ header img,
     max-width: 400px;
     margin: 20px;
 }
+.forgetpass-container{
+    max-width: 100%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
 
 .login-container h2 {
     margin-bottom: 20px;
@@ -1064,12 +1069,33 @@ header img,
     background-color: #0056b3; /* Màu xanh dương đậm hơn khi hover */
 }
 
+.forget-pass-btn{
+    background-color: #75828f; /* Màu xanh dương */
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forget-pass-btn:hover {
+    background-color: rgb(71, 84, 97); /* Màu xanh dương đậm hơn khi hover */
+}
+
+
+
+  
+
 @media (max-width: 768px) {
     .registration-container,
     .login-container {
         padding: 15px; /* Giảm padding cho các container */
         max-width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng màn hình */
     }
+    
 
     .registration-container h2,
     .login-container h2 {

@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="/ass/css/base.css">
     <link rel="stylesheet" href="/ass/css/main.css">
     <link rel="stylesheet" href="/ass/css/index.css">
-
+    <style>
+        p{
+            margin-bottom: 0;
+        }
+        .full-width {
+            grid-column: span 2; /* Phủ kín cả 2 cột */
+        }
+    </style>
     
 </head>
 <body>
@@ -55,6 +62,277 @@
                     <h3>Thông tin cá nhân</h3>
                 </div>
             </div>
+            <div class="pkp_structure_content">
+                <div class="pkpTabs">
+                    <div class="tabs-list">
+                        <button id="btn-1" class="selected-button" onclick="showContext('1', this); return false;">Thông tin</button>
+                        <button id="btn-2" onclick="showContext('2', this); return false;">Liên hệ</button>
+                        <button id="btn-3" onclick="showContext('3', this); return false;">Quyền</button>
+                        <button id="btn-4" onclick="showContext('4', this); return false;">Hồ sơ cá nhân</button>
+                        <button id="btn-5" onclick="showContext('5', this); return false;">Mật khẩu</button>
+
+                    </div>
+                
+                    <div id="1" class="context active">
+                        <div class="pkpListPanel__content">
+                            <form class="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="chucDanh" class="form-label"><strong>Chức danh</strong></label>
+                                            <select id="chucDanh" class="form-select">
+                                                <option selected>Ông</option>
+                                                <option value="1">Bà</option>
+                                                <option value="2">Cô</option>
+                                                <option value="3">Thạc sĩ</option>
+                                                <option value="4">Tiến sĩ</option>
+                                                <option value="5">Phó Giáo Sư</option>
+                                                <option value="6">Giáo sư</option>
+                                            </select>
+                                            <small class="form-text text-muted">Chức danh *</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-end">
+                                        <p><strong>Tài khoản</strong></p>
+                                        <p>hoctrohoangthanh@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="firstName" class="form-label"><strong>Họ và tên</strong></label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="Chữ đệm và tên" value="Thanh">
+                                            <small class="form-text text-muted">Chữ đệm và tên *</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="lastName" class="form-label">&nbsp;</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Họ" value="Nguyễn">
+                                            <small class="form-text text-muted">Họ *</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="gioiTinh" class="form-label"><strong>Giới tính</strong></label>
+                                            <select id="gioiTinh" class="form-select">
+                                                <option selected>Nam</option>
+                                                <option value="1">Nữ</option>
+                                                <option value="2">Khác</option>
+                                            </select>
+                                            <small class="form-text text-muted">Giới tính *</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label for="displayName" class="form-label"><strong>Bạn thích hiển thị tên như thế nào?</strong></label>
+                                            <input type="text" class="form-control" id="displayName" placeholder="Tên hiển thị">
+                                            <small class="form-text text-muted">Tên hiển thị</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="grid-column: span 2;">
+                                        <small class="form-text text-muted">Dữ liệu của bạn được lưu trữ theo <a href="#">cam kết bảo mật</a> của chúng tôi.</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" >
+                                        <button type="submit" class="btn btn-primary">Lưu lại</button>
+                                        <button type="reset" class="btn btn-danger">Hủy bỏ</button>
+                                    </div>
+                                </div>
+                        
+                                
+                            </form>
+                        </div>
+                    </div>
+                
+                    <div id="2" class="context">
+                        <div class="pkpListPanel__content">
+                            <form >
+                                <div class="row">
+                                    <!-- Email -->
+                                    <div class="mb-3 full-width">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" value="hoctrohoangthanh@gmail.com" readonly>
+                                    </div>
+                        
+                                </div>    
+                                
+                                <div class="row">
+                                    <!-- Organization -->
+                                    <div class="mb-3 full-width">
+                                        <label for="organization" class="form-label">Đơn vị tổ chức</label>
+                                        <textarea class="form-control" id="organization" rows="3" style="max-height: 120px;"></textarea>
+                                    </div>
+                                </div>
+                        
+                                    
+                                <div class="row">
+                                    <div class="col-12" style="grid-column: span 2;">
+                                        <small class="form-text text-muted">Dữ liệu của bạn được lưu trữ theo <a href="#">cam kết bảo mật</a> của chúng tôi.</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" >
+                                        <button type="submit" class="btn btn-primary">Lưu lại</button>
+                                        <button type="reset" class="btn btn-danger">Hủy bỏ</button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="3" class="context">
+                        <div class="pkpListPanel__content">
+                            
+                            <form>
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <legend class="col-form-label">Quyền</legend>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reader" checked>
+                                            <label class="form-check-label" for="reader">Đọc giả</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="author" checked>
+                                            <label class="form-check-label" for="author">Tác giả</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="reviewer">
+                                            <label class="form-check-label" for="reviewer">Phản biện</label>
+                                        </div>
+                                     </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <!-- Lĩnh vực nghiên cứu -->
+                                    <div class="mb-3 full-width">
+                                        <label for="researchField" class="form-label">Lĩnh vực nghiên cứu</label>
+                                        <input type="text" class="form-control" id="researchField" placeholder="Nhập lĩnh vực nghiên cứu">
+                                    </div>
+                        
+                                </div>
+                                
+                                
+                                
+                                <div class="row">
+                                    <div class="col-12 full-width">
+                                        <small class="form-text text-muted">Dữ liệu của bạn được lưu trữ theo <a href="#">cam kết bảo mật</a> của chúng tôi.</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" >
+                                        <button type="submit" class="btn btn-primary">Lưu lại</button>
+                                        <button type="reset" class="btn btn-danger">Hủy bỏ</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+
+                    <div id="4" class="context">
+                        <div class="pkpListPanel__content">
+                            <form>
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <h4><strong>Hình ảnh hồ sơ cá nhân</strong></h4>
+                                        <label for="profileImage" class="form-label">Kéo và thả tệp vào đây để bắt đầu tải lên</label>
+                                        <input class="form-control" type="file" id="profileImage">
+                                    </div>
+                                </div>
+                                
+            
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <label for="bio" class="form-label">Trình bày tiểu sử (Ví dụ: bộ phận và cấp bậc)</label>
+                                        <textarea class="form-control" id="bio" rows="5" placeholder="Trình bày tiểu sử..."></textarea>
+                                    </div>
+                                </div>
+                                
+            
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <label for="homepageUrl" class="form-label">Trang chủ URL</label>
+                                        <input type="url" class="form-control" id="homepageUrl" placeholder="Nhập URL của bạn">
+                                    </div>
+                                </div>
+                                
+            
+                                
+            
+                                <div class="row">
+                                    <div class="col-12 full-width">
+                                        <small class="form-text text-muted">Dữ liệu của bạn được lưu trữ theo <a href="#">cam kết bảo mật</a> của chúng tôi.</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" >
+                                        <button type="submit" class="btn btn-primary">Lưu lại</button>
+                                        <button type="reset" class="btn btn-danger">Hủy bỏ</button>
+                                    </div>
+                                </div>
+                            </form>
+                                    
+                            
+                        </div>
+                    </div>
+
+                    <div id="5" class="context">
+                        <div class="pkpListPanel__content">
+                            
+                            <form>
+                                <div class="row">
+                                    <!-- Mật khẩu hiện tại -->
+                                    <div class="mb-3 full-width">
+                                        <label for="currentPassword" class="form-label">Mật khẩu hiện tại</label>
+                                        <input type="password" class="form-control" id="currentPassword" placeholder="Nhập mật khẩu hiện tại">
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <label for="newPassword" class="form-label">Mật khẩu mới</label>
+                                        <input type="password" class="form-control" id="newPassword" placeholder="Mật khẩu phải có ít nhất 6 ký tự.">
+                                    </div>
+                                </div>
+                                <!-- Mật khẩu mới -->
+                                
+                                <div class="row">
+                                    <div class="mb-3 full-width">
+                                        <label for="confirmPassword" class="form-label">Lặp lại mật khẩu mới</label>
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Lặp lại mật khẩu mới">
+                                    </div>
+                                </div>
+                                <!-- Xác nhận mật khẩu mới -->
+                                
+            
+                                <div class="row">
+                                    <div class="col-12 full-width">
+                                        <small class="form-text text-muted">Dữ liệu của bạn được lưu trữ theo <a href="#">cam kết bảo mật</a> của chúng tôi.</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" >
+                                        <button type="submit" class="btn btn-primary">Lưu lại</button>
+                                        <button type="reset" class="btn btn-danger">Hủy bỏ</button>
+                                    </div>
+                                </div>
+                            </form>
+                                    
+                        </div>
+                    </div>
+                </div>
         </div>
         
         

@@ -2,12 +2,16 @@ function loadContent(url, elementId, callback) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-            if (callback) callback(); // Gọi hàm callback nếu có
+            var element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = data;
+                if (callback) callback(); // Gọi hàm callback nếu có
+            } else {
+                console.error('Element with ID "' + elementId + '" does not exist.');
+            }
         })
         .catch(error => console.error('Error loading content:', error));
 }
-
 document.addEventListener('DOMContentLoaded', function() {
     // Mã của bạn ở đây
     loadContent('/includes/banner.html', 'banner', initializeBanner);
